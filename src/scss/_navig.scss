@@ -1,0 +1,135 @@
+
+#slide-menu {
+    height: 100vh;
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    transition: transform .3s
+                cubic-bezier(0, .52, 0, 1);
+  }
+
+  #menuButton{
+      position: fixed;
+      z-index: 100;
+      padding: 0.5rem;
+      background-color: #181818;
+      display: flex;
+      align-items: center;
+  }
+   
+
+  .hide{
+    transform: translate3d(-200px, 0, 0);
+    }
+ 
+  .show{
+    transform: translate3d(0px, 0, 0);
+    overflow: hidden;
+    }
+  
+///////////////////////////////////////////////////////////////////////////////////////
+.icon-real{
+    width: 55%;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 0;
+}
+
+.fa-bars{
+    color: #009AFF;
+    font-size: 2rem;
+    
+}
+
+.main-nav{
+
+    *{
+        text-decoration: none;
+    }
+    
+    display: flex;
+   
+    
+    max-width: 160px;
+    
+    top: 0;
+    left: 0;
+    background-color: #181818;
+    overflow-x: hidden;
+    padding-top: 20px;
+    align-items: center;
+    
+
+ 
+    
+    ul{
+        padding: 10px;
+        li{
+            
+            i{
+                margin-bottom: 0.2rem;
+            }
+            img{
+                margin-bottom: 0.2rem;
+            }
+            &:hover{
+                .fa-book-open,.fa-lightbulb,.fa-address-card,.icon-real{
+                margin-bottom: 1rem;
+                }
+            }
+            
+            
+            flex: 1;
+            font-size: 16px;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #009AFF;
+            list-style-type: none;
+            .fa-book-open,.fa-lightbulb,.fa-address-card{
+                color: white;
+                transition: all 0.3s ease-in-out;
+                font-size: 50px;
+              
+            }
+            
+        
+            p{
+                
+                color: #009AFF;
+              
+                margin-top: 0;
+            }
+        }
+    }
+ 
+}
+
+@media (max-width: 1350px) {
+
+    #slide-menu{
+        position: fixed;
+    }
+
+    .main-nav{
+        justify-content: center;
+       
+        height: 100%;
+        
+        max-width: 180px;
+        transition: all 0.3s ease-in-out;
+
+    }
+}
+@media (min-width: 1350px) {
+
+   
+    #menuButton{
+        display: none;
+    }
+    #slide-menu.hide{
+        
+        transform: translate3d(0px, 0, 0);
+    }
+}
+
+   

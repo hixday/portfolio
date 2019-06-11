@@ -1,0 +1,171 @@
+.contact {
+    .container {
+        width: 90%;
+    }
+}
+
+.contact-title {
+    margin-right: 2rem;
+    width: 20%;
+    min-width: 290px;
+    ul {
+        width: 100%;
+
+        li {
+
+            h1 {
+                font-size: 36px;
+            }
+
+      
+
+            list-style: none;
+            text-align: center;
+        }
+    }
+
+    .fa-address-card {
+        font-size: 150px;
+    }
+}
+
+.contact-card {
+
+    width: 100%;
+    margin: 1rem 2rem 3rem 0rem;
+
+    .left-card {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        min-width: 400px;
+        background-color: #001236;
+
+        .contact-info {
+
+            .contact-title {
+                width: 100%;
+
+                h2 {
+                   padding-left: 60px;
+
+                    color: white;
+                }
+            }
+
+            .contact-text {
+                padding: 0px 60px 60px 60px;
+                color: white;
+                font-size: 22px;
+            }
+        }
+
+        .photo-card {
+
+
+            padding: 30px;
+
+            img {
+                width: 95%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            background-color: #001236;
+            min-width: 300px;
+
+        }
+    }
+
+    .right-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 700px;
+        width: 65%;
+        background-color: rgba($color: #009AFF, $alpha: 0.2);
+
+        .phone{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                width: 75%;
+            }
+        }
+
+    }
+}
+
+.fa-mobile-alt{
+    font-size: 100px;
+}
+.fa-envelope{
+    font-size: 100px;
+}
+.fa-linkedin{
+    font-size: 100px;
+}
+
+
+@media (max-width: 1610px){
+    .contact{
+        .container{
+            width: 100%;
+        }
+    .right-card{
+        width: 50%;
+        min-width: 400px;
+    }
+}
+}
+
+@media (max-width: 1350px){
+    #menuButton{
+        position: fixed;
+        left: 0;
+    }
+    
+    .contact{
+        .contact-title{
+            margin: 0;
+            ul{
+                padding: 0;
+            }
+        }
+        justify-content: center;
+        .left-card{
+            width: 80%;
+        }
+        .right-card{
+            width: 80%;
+            .phone{
+                margin-top: 1rem;
+            }
+        }
+        .flex{
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+       .contact-card{
+           margin-right: 0;
+       }
+    }
+}
+
+@media (max-width: 580px){
+    .contact{
+       min-width: 300px;
+       .left-card{
+        min-width: 300px;
+        width: 95%;
+    }
+    .right-card{
+        min-width: 300px;
+        width: 95%;
+    }
+}
+}

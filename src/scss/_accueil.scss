@@ -1,0 +1,300 @@
+.perspective-box{
+    perspective: 1000px;
+    &:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+}
+
+.info-grid-card{
+    @extend .master-box;
+   
+}
+
+
+.box-inner{
+    a{
+        color: inherit;
+    }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    .icon-real{
+        width: 45%;
+    }
+    .fa-address-card{
+        color: black;
+    }
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .back-comp{
+      @extend .back;
+
+
+  }
+
+  .front-contact{
+    @extend .front;
+    background-image: url("/images/accueil/handShake.jpg");
+    background-size: cover;
+    
+    background-position: center 70%;
+
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .front-comp{
+    @extend .front;
+    background-image: url("/images/accueil/ampoule.jpg");
+    background-size: cover;
+    background-position: center 70%;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .front-real{
+    @extend .front;
+    background-image: url("/images/accueil/realisations.jpg");
+    background-size: cover;
+    
+    background-position: center 70%;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 12.2vh);
+    
+    grid-gap: 20px;
+    grid-template-areas: 
+    "box1 box1 box2 box2 box3 box3 box3"
+    "box1 box1 box2 box2 box3 box3 box3"
+    "box1 box1 box5 box5 box6 box6 box7"
+    "box4 box4 box5 box5 box6 box6 box7"
+    "box4 box4 box5 box5 box6 box6 box7"
+    "box4 box4 box8 box8 box8 box9 box9"
+    "box4 box4 box8 box8 box8 box9 box9";
+    
+
+    .master-box{
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        a{
+            text-decoration: none;
+        }
+        a:visited{
+            color: inherit;
+        }
+        i{
+            font-size: 6.5vw;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin: 0;
+            padding: 5px;
+            font-size: 2vw;
+        }
+    }
+
+    .box1{ 
+        @extend .master-box;
+        
+        p{
+            border: 3px solid white;
+        }
+        color: white;
+        grid-area: box1;
+        background-color: #0068BD;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    .box2{
+        
+        grid-area: box2;
+        padding: 10px;
+        background-image: url("/images/background/cubic.jpg");
+        background-size: cover;
+        
+    }
+    .box3{
+        grid-area: box3;
+        padding: 10px;
+        background-color:#94CFFF;
+        
+    }
+    .box4{
+        @extend .master-box;
+        @extend .perspective-box;
+        p{
+            border: 3px solid black;
+        }
+        
+        grid-area: box4;
+        padding: 10px;
+        background-color:#DADADA;
+        
+    }
+    .box5{
+        @extend .master-box;
+        @extend .perspective-box;
+        p{
+            border: 3px solid white;
+        }
+        color: white;
+        grid-area: box5;
+        padding: 10px;
+        background-color:#001236;
+     
+    }
+    .box6{
+        @extend .master-box;
+        @extend .perspective-box;
+        p{
+            border: 3px solid black;
+        }
+        
+        grid-area: box6;
+        padding: 10px;
+        background-color:#DADADA;
+       
+    }
+    .box7{
+        grid-area: box7;
+        padding: 10px;
+        background-color:#0068BD;
+       
+    }
+    .box8{
+        grid-area: box8;
+        padding: 10px;
+        background-color:#009AFF;
+       
+    }
+    .box9{
+        grid-area: box9;
+        padding: 10px;
+        background-image: url("/images/background/cubic.jpg");
+        background-size: cover;
+        transform: rotate(180deg);
+      
+    }
+    
+}
+
+.main-bg{
+    background-color: black;
+    padding: 10px;
+    
+} 
+
+@media(max-width:1300px){
+
+    .box-inner{
+        .icon-real{
+            width: 30%;
+        }
+    }
+    .main-grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(7, 150px);
+      
+        grid-gap: 20px;
+        grid-template-areas: 
+        "box1 box1 box2 box2 box7 box7 "
+        "box1 box1 box2 box2 box3 box3 "
+        "box5 box5 box5 box6 box6 box6 "
+        "box5 box5 box5 box6 box6 box6 "
+        "box5 box5 box5 box6 box6 box6 "
+        "box8 box4 box4 box4 box4 box9 "
+        "box8 box4 box4 box4 box4 box9 ";
+    }
+
+}
+
+@media(max-width:1050px){
+    .box-inner{
+        .icon-real{
+            width: 35%;
+        }
+    }
+    .master-box{
+        i{
+            font-size: 8.5vw;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin: 0;
+            padding: 5px;
+            font-size: 3vw;
+        }
+    }
+}
+
+@media(max-width:750px){
+  
+    .main-grid{
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(10, 100px);
+        grid-template-areas: 
+        "box1 box1 box3 box3"
+        "box1 box1 box2 box2"
+        "box1 box1 box2 box2"
+        "box4 box4 box5 box5"
+        "box4 box4 box5 box5"
+        "box4 box4 box6 box6"
+        "box4 box4 box6 box6"
+        "box7 box7 box8 box8"
+        "box7 box7 box9 box9"
+        "box7 box7 box9 box9";
+    }
+}
+
+
+
+
+@media(max-width:600px){
+  
+    .main-grid{
+
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, 300px);
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "box7"
+        "box8"
+        "box9";
+    }
+
+    .master-box{
+        i{
+            font-size: 20.5vw;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin: 0;
+            padding: 5px;
+            font-size: 5vw;
+        }
+    }
+}

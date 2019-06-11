@@ -1,0 +1,324 @@
+.competences {
+    @keyframes bounce {
+
+        100%,
+        15%,
+        40%,
+        75% {
+            transform-origin: center center;
+        }
+
+        15% {
+            transform: scale(1.2, 1.1);
+        }
+
+        40% {
+            transform: scale(0.95, 0.95);
+        }
+
+        75% {
+            transform: scale(1.05, 1);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+
+    .tech-content {
+        ul {
+            margin-top: 15px;
+            padding-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                margin-left: 10px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: white;
+                background-color: #009AFF;
+                padding: 5px;
+                transition: 0.75s ease-in-out 0.5s;
+                &:hover {
+                    background-color: red;
+                    transition: 0s ease-in-out 0s;
+                }
+            }
+        }
+    }
+
+    .container {
+        margin: 1rem auto auto;
+    }
+
+    h1 {
+        color: #009AFF;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .comp-title {
+
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 10.5rem;
+
+        .fa-lightbulb {
+            font-size: 150px;
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                text-align: center;
+            }
+        }
+    }
+
+    .comp-left-box {
+        width: 40%;
+        margin: 0 3rem 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .comp-right-box {
+        width: 60%;
+
+    }
+
+    .comp-info {
+        width: 100%;
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin: 0;
+            text-align: center;
+        }
+
+        border-radius: 10px;
+        background-color: rgba($color: #009AFF, $alpha: 0.5);
+        padding: 20px;
+
+    }
+
+    .comp-prio {
+        width: 100%;
+        margin-bottom: 6rem;
+
+        h4 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.7rem;
+            color: white;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: white;
+        }
+
+        .dots {
+            @extend .flex;
+            text-align: center;
+            .dot-content {
+                margin-right: 2rem;
+            }
+            .dot {
+                &:hover {
+                    animation: bounce 300ms ease-in-out;
+                }
+
+                .icon-prio {
+                    width: 65%;
+
+                }
+
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                height: 150px;
+                width: 150px;
+                background-color: #009AFF;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .tech-content {
+        width: 100%;
+        border-left: 3px #009AFF solid;
+        border-top: 3px #009AFF solid;
+        height: 100%;
+    }
+}
+@media (max-width: 1620px) {
+
+    .competences {
+        .comp-title {
+            margin-bottom: 4rem;
+        }
+        .comp-left-box {
+            width: 30%;
+        }
+
+        .comp-right-box {
+
+            .comp-prio {
+                text-align: center;
+                margin-bottom: 2rem;
+                .dots {
+                    display: flex;
+                    flex-direction: row;
+
+                    flex-wrap: wrap;
+                    .dot-content {
+                        margin-right: 0;
+                    }
+                    .dot {
+                        height: 100px;
+                        width: 100px;
+
+                    }
+
+                    .dot-content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+                        margin-bottom: 1rem;
+                        align-items: center;
+                        p {
+                            width: 80%;
+
+                        }
+                    }
+                }
+            }
+
+            .comp-tech {
+                h2 {
+                    text-align: center;
+                }
+                .tech-content {
+                    border-right: 3px #009AFF solid;
+                    ul {
+                        justify-content: center;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
+@media (max-width: 1575px) {
+    .competences {
+        .comp-left-box {}
+        .comp-right-box {
+            width: 60%;
+        }
+    }
+}
+@media (max-width: 1420px) {
+    .competences {
+        .comp-left-box {
+
+            width: 35%;
+            .comp-info {
+                width: 100%;
+            }
+        }
+        .comp-right-box {
+            width: 55%;
+        }
+    }
+}
+@media (max-width: 1350px) {
+    body,
+    html {
+        overflow: visible;
+    }
+
+    .competences {
+        .comp-title {
+            margin-bottom: 6rem;
+        }
+        .flex {
+            flex-direction: column;
+            align-items: center;
+        }
+        .comp-left-box {
+            margin: 0;
+            align-items: center;
+            width: 100%;
+            .comp-info {
+
+                width: 80%;
+            }
+        }
+        .comp-right-box {
+            width: 100%;
+
+        }
+    }
+}
+@media (max-width: 720px) {
+    .competences {
+
+        .comp-left-box {
+            margin: 0;
+            align-items: center;
+            width: 100%;
+            .comp-info {
+
+                width: 80%;
+            }
+        }
+
+        .dot-content {
+            p {
+                text-align: left;
+            }
+          
+        }
+        .comp-info {
+            h2 {
+                font-size: 28px;
+            }
+            p {
+
+                text-align: left;
+                line-height: 1.25;
+            }
+        }
+        .tech-content {
+            ul {
+                padding: 0;
+                margin: 5px 5px 15px;
+                li {
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

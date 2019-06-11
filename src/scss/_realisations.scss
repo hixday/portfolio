@@ -1,0 +1,206 @@
+.realisations{
+  
+    .container{
+        width: 90%;
+        
+    }
+
+    .icon-real{
+        width: 70%;
+    }
+}
+
+.real-bg{
+    background-color: $main-bg;
+}
+
+.real-title{
+    width: 20%;
+    min-width: 290px;
+    ul{
+        padding: 0;
+        li{
+            text-align: center;
+            list-style: none;
+            h1{
+                font-size: 36px;
+                color: #009AFF;
+            }
+            .fa-laptop-code{
+                font-size: 150px;
+                color: white;
+            }
+        }
+    }
+}
+
+.real-cards{
+    @extend .flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 95%;
+    margin: 2rem 0rem 0rem 0rem;
+    
+}
+
+.card{
+    border: solid 2px #252627;
+    background-color: white ;
+    position: relative;
+    width: 33%;
+    min-width: 300px;
+    cursor: pointer;
+    .text{
+        h2{
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover{
+        .card-img1,.card-img2,.card-img3,.card-img4,.card-img5,.card-img6{
+            opacity:0;
+        }
+      
+        .real-button{
+            opacity: 1;
+            bottom: 10%;
+        }
+        .text{
+            opacity: 1;
+            top: 20%;
+        }
+    }
+    .text{
+        top: 0;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .real-button{
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        border: 2px solid red;
+        z-index: 2;
+        text-align: center;
+        width: 170px;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 900;
+        padding: 15px 0;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color: red;
+            color: white;
+        }
+    }
+   
+    .card-img1{
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/realisations/raymond.jpg");
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+       
+    }
+    .card-img2{
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/realisations/miquelie.jpg");
+        background-position: center;
+        background-size: cover;
+       
+    }
+    .card-img3{
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/realisations/leane.jpg");
+        background-position: center;
+        background-size: cover;
+      
+    }
+    .card-img4{
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/realisations/modulo.jpg");
+        background-position: center;
+        background-size: cover;
+       
+    }
+    .card-img5{
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/realisations/laravel.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .card-img6{
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/realisations/nuscratch.jpg");
+        background-size: cover;
+        
+        
+        
+    }
+}
+@media (max-width: 1550px){
+.real-cards{
+    justify-content: center;
+}
+    
+}
+@media (max-width: 1350px){
+    .realisations{
+        #menuButton{
+         position: fixed;
+         left: 0;
+        }
+        justify-content: center;
+        .flex{
+            &:first-child{
+                justify-content: flex-start;
+            }
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .real-cards{
+        height: auto;
+        .card{
+          width: 50%;  
+          height: 400px;
+        }
+    }
+}
+
+@media (max-width: 760px){
+    .realisations{
+        .real-cards{
+            .card{
+                width: 100%;
+                .text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    width: 80%;
+                }
+            }
+            }
+        }
+    }
+}
